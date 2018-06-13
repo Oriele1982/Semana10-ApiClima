@@ -62,15 +62,15 @@ $(document).ready(function(){
 	$("#select").on("change", function(){
 		if ($(this).val()=="ccp") {
 			map.setCenter(ccp);
-			map.Marker(ccp);
+			
 		}
 		if ($(this).val()=="scl") {
 			map.setCenter(scl);
-			map.Marker(scl);
+			
 		}
 		if ($(this).val()=="ari") {
 			map.setCenter(ari);
-			map.Marker(ari);
+			
 		}
 		if ($(this).val()=="vld") {
 			map.setCenter(vld);
@@ -78,11 +78,11 @@ $(document).ready(function(){
 		}
 		if ($(this).val()=="idp") {
 			map.setCenter(idp);
-			map.Marker(idp);
+			
 		}
 		if ($(this).val()=="lsr") {
 			map.setCenter(lsr);
-			map.Marker(lsr);
+			
 		}
 	})
      
