@@ -23,7 +23,7 @@ $(document).ready(function(){
 		'rain':'https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/256x256/cloud_rain.png',
 		'snow':'https://i.ebayimg.com/images/g/J5cAAOxyn~pR0ZOE/s-l300.jpg',
 		'cloudy':'https://image.freepik.com/free-icon/cloudy-weather-ios-7-symbol_318-38966.jpg',
-		
+
 	}
 
 	$('#select').on('change', function(){
@@ -40,11 +40,57 @@ $(document).ready(function(){
 
 	var map;
       function initMap() {
+      	var myLatLng = {lat: -35.675147, lng: -71.54296899999997};
+      	var scl = {'lat': -33.4488897,'lng': -70.6692655};
+		var ccp = {'lat': -36.8201352,'lng': -73.0443904};
+		var ari = {'lat': -18.4782534,'lng': -70.31259879999999};
+		var vld = {'lat': -39.8195857,'lng': -73.2452103};
+		var idp = {'lat': -27.112723,'lng': -109.34968650000002};
+		var lsr = {'lat':-29.9026691,'lng': -71.25193739999997};
+
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -35.675147, lng: -71.54296899999997},
+          center: myLatLng,
           zoom: 8
         });
-      }
 
+        //  var marker = new google.maps.Marker({
+        //   position: ccp;
+        //   map: map,
+          
+        // });        
+	
+	$("#select").on("change", function(){
+		if ($(this).val()=="ccp") {
+			map.setCenter(ccp);
+			map.Marker(ccp);
+		}
+		if ($(this).val()=="scl") {
+			map.setCenter(scl);
+			map.Marker(scl);
+		}
+		if ($(this).val()=="ari") {
+			map.setCenter(ari);
+			map.Marker(ari);
+		}
+		if ($(this).val()=="vld") {
+			map.setCenter(vld);
+			map.Marker(vld);
+		}
+		if ($(this).val()=="idp") {
+			map.setCenter(idp);
+			map.Marker(idp);
+		}
+		if ($(this).val()=="lsr") {
+			map.setCenter(lsr);
+			map.Marker(lsr);
+		}
+	})
+     
+};
+    
+
+
+
+	     
 
     
