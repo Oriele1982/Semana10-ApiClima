@@ -38,7 +38,7 @@ $(document).ready(function(){
 	})
 });
 
-	var map;
+	var map, marker;
       function initMap() {
       	var myLatLng = {lat: -35.675147, lng: -71.54296899999997};
       	var scl = {'lat': -33.4488897,'lng': -70.6692655};
@@ -50,15 +50,46 @@ $(document).ready(function(){
 
         map = new google.maps.Map(document.getElementById('map'), {
           center: myLatLng,
-          zoom: 8
+          zoom: 10
         });
 
-        //  var marker = new google.maps.Marker({
-        //   position: ccp;
-        //   map: map,
-          
-        // });        
-	
+         var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,         
+        });        
+		
+
+         var marker = new google.maps.Marker({
+          position: scl,
+          map: map,         
+        });        
+		
+		 var marker = new google.maps.Marker({
+          position: ccp,
+          map: map,         
+        }); 
+
+		 var marker = new google.maps.Marker({
+          position: ari,
+          map: map,         
+        }); 
+
+		  var marker = new google.maps.Marker({
+          position: vld,
+          map: map,         
+        }); 
+
+		   var marker = new google.maps.Marker({
+          position: idp,
+          map: map,         
+        }); 
+
+		    var marker = new google.maps.Marker({
+          position: lsr,
+          map: map,         
+        }); 
+		
+
 	$("#select").on("change", function(){
 		if ($(this).val()=="ccp") {
 			map.setCenter(ccp);
@@ -87,10 +118,3 @@ $(document).ready(function(){
 	})
      
 };
-    
-
-
-
-	     
-
-    
